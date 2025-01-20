@@ -15,6 +15,7 @@ This Streamlit application allows users to interact with PDF documents and websi
 - **Memory-Enhanced Conversations**: Keeps track of chat history to improve the interaction flow.
 - **Clear Chat**: Easily reset the conversation with a single button.
 - **Dynamic Model Selection**: Choose from a list of supported models provided by GroqCloud to tailor the conversational AI behavior.
+<img src="https://github.com/BoutainaELYAZIJI/RAG-PDF-Websites/blob/main/model selection.png">
 
 ## Supported Models
 
