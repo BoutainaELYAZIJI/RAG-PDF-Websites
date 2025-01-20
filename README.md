@@ -21,19 +21,19 @@ This Streamlit application allows users to interact with PDF documents and websi
 GroqCloud currently supports the following models:
 
 ### Production Models
-| MODEL ID               | DEVELOPER   | CONTEXT WINDOW (TOKENS) | MAX OUTPUT TOKENS | MODEL CARD LINK  |
-|------------------------|-------------|--------------------------|-------------------|------------------|
-| distil-whisper-large-v3-en | HuggingFace | -                        | -                 | [Card](#)        |
-| gemma2-9b-it           | Google      | 8,192                    | -                 | [Card](#)        |
-| llama-3.3-70b-versatile | Meta        | 128k                     | 32,768            | [Card](#)        |
-| llama-3.1-8b-instant   | Meta        | 128k                     | 8,192             | [Card](#)        |
-| llama-guard-3-8b       | Meta        | 8,192                    | -                 | [Card](#)        |
+| MODEL ID               | DEVELOPER   | CONTEXT WINDOW (TOKENS) | MAX OUTPUT TOKENS |
+|------------------------|-------------|--------------------------|-------------------|
+| distil-whisper-large-v3-en | HuggingFace | -                        | -                 | 
+| gemma2-9b-it           | Google      | 8,192                    | -                 | 
+| llama-3.3-70b-versatile | Meta        | 128k                     | 32,768            |
+| llama-3.1-8b-instant   | Meta        | 128k                     | 8,192             | 
+| llama-guard-3-8b       | Meta        | 8,192                    | -                 | 
 
 ### Preview Models
-| MODEL ID               | DEVELOPER   | CONTEXT WINDOW (TOKENS) | MAX OUTPUT TOKENS | MODEL CARD LINK  |
-|------------------------|-------------|--------------------------|-------------------|------------------|
-| llama-3.3-70b-specdec  | Meta        | 8,192                    | -                 | [Card](#)        |
-| llama-3.2-1b-preview   | Meta        | 128k                     | 8,192             | [Card](#)        |
+| MODEL ID               | DEVELOPER   | CONTEXT WINDOW (TOKENS) | MAX OUTPUT TOKENS |
+|------------------------|-------------|--------------------------|-------------------|
+| llama-3.3-70b-specdec  | Meta        | 8,192                    | -                 |
+| llama-3.2-1b-preview   | Meta        | 128k                     | 8,192             |
 
 ## Requirements
 
@@ -80,25 +80,3 @@ GroqCloud currently supports the following models:
     - **Model Selection**: Choose a GroqCloud model to customize your AI experience.
     - **Clear Chat**: Reset the chat conversation using the "Clear Chat" button.
 
----
-
-### Streamlit Integration
-
-You can add a dropdown in the Streamlit app to let the user select the model dynamically. Here's an updated section of your app code:
-
-```python
-# Dropdown for selecting a model
-st.sidebar.header("Model Selection")
-supported_models = [
-    "gemma2-9b-it",
-    "llama-3.3-70b-versatile",
-    "llama-3.1-8b-instant",
-    "llama-guard-3-8b",
-    "llama-3.3-70b-specdec",
-    "llama-3.2-1b-preview",
-]
-default_model = "llama-3.1-8b-instant"  # Default model
-selected_model = st.sidebar.selectbox("Choose a GroqCloud model:", supported_models, index=supported_models.index(default_model))
-
-# Use the selected model in API calls
-response = generate_text_groq(query=user_query, context=context, model=selected_model)
