@@ -59,7 +59,8 @@ Those are one of models that GroqCloud currently supports :
     ```makefile
     API_KEY=<your_groqcloud_api_key>
     ```
-
+    Or in App.py :
+    api_key = "your_groqcloud_api_key"
 ## Usage
 
 1. **Run the application**:

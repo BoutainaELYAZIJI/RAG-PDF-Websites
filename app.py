@@ -1,4 +1,5 @@
 import os
+from dotenv import load_dotenv
 import streamlit as st
 from PyPDF2 import PdfReader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -16,10 +17,12 @@ from langchain.memory import ConversationBufferMemory
 
 # GroqCloud API Configuration
 # Load environment variables from the .env file
-#load_dotenv()
+load_dotenv()
 
 # Access the API key
-api_key = "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"
+api_key = "your_groqcloud_api_key"
+# api_key = os.getenv("API_KEY")
+
 groq_generation_url = "https://api.groq.com/openai/v1/chat/completions"
 
 # Embedding Model
