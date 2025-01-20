@@ -8,3 +8,4 @@ sentence_transformers
 scrapy
 beautifulsoup4
 requests
+python-dotenv

@@ -36,7 +36,7 @@ This Streamlit application allows users to interact with PDF documents and websi
     Create a `.env` file in the root directory and add your GroqCloud API Key:
 
     ```makefile
-    GROQCLOUD_API_KEY=<your_groqcloud_api_key>
+    API_KEY=<your_groqcloud_api_key>
     ```
 
 ## Usage
