@@ -1,6 +1,11 @@
 # Chat with PDFs and Websites 👨‍🔧
 
 This Streamlit application allows users to interact with PDF documents and website content using conversational AI powered by GroqCloud's generative AI.
+## Screenshots
+
+<img  src="https://github.com/BoutainaELYAZIJI/RAG-PDF-Websites/blob/main/image1.png" >
+<img  src="https://github.com/BoutainaELYAZIJI/RAG-PDF-Websites/blob/main/image2.png" >
+
 
 ## Features
 
