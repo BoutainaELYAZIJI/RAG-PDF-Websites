@@ -7,7 +7,7 @@ from langchain.docstore.document import Document
 import faiss
 import numpy as np
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup   
 from urllib.parse import urljoin
 from langchain.prompts import PromptTemplate
 from langchain.chains import ConversationChain
