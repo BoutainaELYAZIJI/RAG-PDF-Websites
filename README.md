@@ -17,7 +17,7 @@ This Streamlit application allows users to interact with PDF documents and websi
 
 ## Requirements
 
-- Python 3.8+
+- Python 3.12.3
 - Libraries specified in `requirements.txt`
 - GroqCloud API Key configured via environment variable `GROQCLOUD_API_KEY`
 

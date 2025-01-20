@@ -160,8 +160,7 @@ def query_with_memory_and_template(query, context, memory, template):
 
     return answer, memory.chat_memory.messages  # Return chat history
 
-# Streamlit App
-# Streamlit App
+
 # Streamlit App
 def main():
     st.set_page_config(page_title="AI Chatbot with GroqCloud", layout="wide")
@@ -174,9 +173,19 @@ def main():
     if "chat_history" not in st.session_state:
         st.session_state["chat_history"] = []  # Store user/AI messages
 
-    # Sidebar for data sources
+    # Sidebar for data sources and model selection
     st.sidebar.header("📂 Data Sources")
     data_sources = st.sidebar.multiselect("Choose data sources:", ["PDF", "Website"], default=[])
+    
+    # Model selection
+    st.sidebar.header("🤖 Model Selection")
+    model_options = [
+        "llama-3.1-8b-instant",
+        "gemma2-9b-it",
+        "llama-3.3-70b-versatile",
+        "mixtral-8x7b-32768"
+    ]
+    selected_model = st.sidebar.selectbox("Choose an AI model:", model_options, index=0)
 
     if "PDF" in data_sources:
         pdf_docs = st.sidebar.file_uploader("📄 Upload your PDF files:", accept_multiple_files=True, type=["pdf"])
@@ -260,7 +269,7 @@ def main():
 
             # Call GroqCloud API to generate a response
             try:
-                response = generate_text_groq(query=user_query, context=context,model="llama-3.1-8b-instant")
+                response = generate_text_groq(query=user_query, context=context, model=selected_model)
                 memory.chat_memory.add_ai_message(response)
 
                 # Add the new user message and AI response to chat history
@@ -269,7 +278,6 @@ def main():
 
                 # Display only the new response
                 with chat_placeholder:
-  # For user messages
                     st.markdown(
                         f"""
                         <div style="background-color: #ffffff; padding: 10px; border-radius: 5px; margin: 10px 0; border: 1px solid #ddd;">
@@ -278,8 +286,6 @@ def main():
                         """,
                         unsafe_allow_html=True,
                     )
-
-                    # For AI responses
                     st.markdown(
                         f"""
                         <div style="background-color: #f2f2f2; padding: 10px; border-radius: 5px; margin: 10px 0; border: 1px solid #ddd;">
@@ -288,7 +294,6 @@ def main():
                         """,
                         unsafe_allow_html=True,
                     )
-
 
             except Exception as e:
                 st.error(f"Error calling the API: {e}")
