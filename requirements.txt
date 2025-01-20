@@ -1,0 +1,10 @@
+streamlit
+google-generativeai
+python-dotenv
+langchain
+PyPDF2
+faiss-cpu
+sentence_transformers
+scrapy
+beautifulsoup4
+requests
