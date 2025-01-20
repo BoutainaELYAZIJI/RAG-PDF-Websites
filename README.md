@@ -19,7 +19,7 @@ This Streamlit application allows users to interact with PDF documents and websi
 
 ## Supported Models
 
-GroqCloud currently supports the following models:
+Those are one of models that GroqCloud currently supports :
 
 ### Production Models
 | MODEL ID               | DEVELOPER   | CONTEXT WINDOW (TOKENS) | MAX OUTPUT TOKENS |
@@ -30,11 +30,6 @@ GroqCloud currently supports the following models:
 | llama-3.1-8b-instant   | Meta        | 128k                     | 8,192             | 
 | llama-guard-3-8b       | Meta        | 8,192                    | -                 | 
 
-### Preview Models
-| MODEL ID               | DEVELOPER   | CONTEXT WINDOW (TOKENS) | MAX OUTPUT TOKENS |
-|------------------------|-------------|--------------------------|-------------------|
-| llama-3.3-70b-specdec  | Meta        | 8,192                    | -                 |
-| llama-3.2-1b-preview   | Meta        | 128k                     | 8,192             |
 
 ## Requirements
 
