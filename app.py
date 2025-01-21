@@ -15,9 +15,13 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import ConversationChain
 from langchain.memory import ConversationBufferMemory
 
+
 # GroqCloud API Configuration
 # Load environment variables from the .env file
-load_dotenv(dotenv_path="C:\\Users\\hp\\Downloads\\Gemini-RAG-Application-main\\Gemini-RAG-Application-main\\.env")
+current_dir = os.path.dirname(os.path.abspath(__file__))
+dotenv_path = os.path.join(current_dir, ".env")
+load_dotenv(dotenv_path=dotenv_path)
+
 
 api_key = os.getenv("API_KEY")
 # Access the API key
