@@ -17,8 +17,7 @@ from langchain.memory import ConversationBufferMemory
 
 # GroqCloud API Configuration
 # Load environment variables from the .env file
-load_dotenv()
-load_dotenv(dotenv_path="C:\Users\hp\Downloads\Gemini-RAG-Application-main\Gemini-RAG-Application-main\.env")
+load_dotenv(dotenv_path="C:\\Users\\hp\\Downloads\\Gemini-RAG-Application-main\\Gemini-RAG-Application-main\\.env")
 
 api_key = os.getenv("API_KEY")
 # Access the API key
