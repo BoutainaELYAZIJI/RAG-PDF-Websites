@@ -15,13 +15,16 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import ConversationChain
 from langchain.memory import ConversationBufferMemory
 
+
 # GroqCloud API Configuration
 # Load environment variables from the .env file
-load_dotenv()
 
-# Access the API key
-api_key = "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"
+# Access API key from Streamlit secrets
+api_key = st.secrets["API_KEY"]
+
+
 # api_key = os.getenv("API_KEY")
+# Access the API key
 
 groq_generation_url = "https://api.groq.com/openai/v1/chat/completions"
 
