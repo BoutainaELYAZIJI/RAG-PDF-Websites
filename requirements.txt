@@ -10,3 +10,5 @@ beautifulsoup4
 requests
 python-dotenv
 langchain_community
+torch
+torchvision
