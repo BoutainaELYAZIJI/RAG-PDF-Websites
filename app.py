@@ -20,8 +20,8 @@ from langchain.memory import ConversationBufferMemory
 load_dotenv()
 
 # Access the API key
-api_key = "your_groqcloud_api_key"
-# api_key = os.getenv("API_KEY")
+
+api_key = os.getenv("API_KEY")
 
 groq_generation_url = "https://api.groq.com/openai/v1/chat/completions"
 
