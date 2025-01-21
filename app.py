@@ -18,10 +18,10 @@ from langchain.memory import ConversationBufferMemory
 # GroqCloud API Configuration
 # Load environment variables from the .env file
 load_dotenv()
-
-# Access the API key
+load_dotenv(dotenv_path="C:\Users\hp\Downloads\Gemini-RAG-Application-main\Gemini-RAG-Application-main\.env")
 
 api_key = os.getenv("API_KEY")
+# Access the API key
 
 groq_generation_url = "https://api.groq.com/openai/v1/chat/completions"
 
