@@ -28,7 +28,7 @@ api_key = st.secrets["API_KEY"]
 
 groq_generation_url = "https://api.groq.com/openai/v1/chat/completions"
 
-# Embedding Model
+# Embedding Model   
 embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
 
 # Extract text from PDF
